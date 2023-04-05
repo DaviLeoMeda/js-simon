@@ -11,9 +11,17 @@ let numberPlace = document.getElementById("numberHere");
 
 array = [];
 
-start.addEventListener("click", () {
+start.addEventListener("click", function () {
 
-    let numbSequen = setInterval(function () )
+    let numbSequen = setInterval(function () {
 
-    numbersHere.innerHTML = 
+        numbersHere.innerHTML += `<li> ${numCpu}</li>`;
+
+    }, 1000);
+    console.log(numCpu);
+
+    setTimeout(function () {
+        clearInterval(numbSequen);
+
+    }, 5000)
 })
