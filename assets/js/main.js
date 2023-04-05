@@ -16,6 +16,7 @@ start.addEventListener("click", function () {
     let numbSequen = setInterval(function () {
 
         numbersHere.innerHTML += `<li> ${numCpu}</li>`;
+        array.push(numCpu);
 
     }, 1000);
     console.log(numCpu);
