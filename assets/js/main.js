@@ -3,26 +3,31 @@
 // creiamo la funzione per ottenere i numeri randomici
 
 function numeriPc(max, min) {
-    Math.floor(Math.random() * max) + min;
+    return Math.floor(Math.random() * max) + min;
 }
 
-let numCpu = numeriPc(5, 1);
-let numberPlace = document.getElementById("numberHere");
 
-array = [];
+let numberPlace = document.getElementById("numbersHere");
+let start = document.getElementById("start");
+
+let arrayCPU = [];
 
 start.addEventListener("click", function () {
 
     let numbSequen = setInterval(function () {
 
-        numbersHere.innerHTML += `<li> ${numCpu}</li>`;
-        array.push(numCpu);
+        let numCpu = numeriPc(100, 1);
+        numberPlace.innerHTML += `<li> ${numCpu}</li>`;
+        arrayCPU.push(numCpu);
+        console.log(numCpu);
 
     }, 1000);
-    console.log(numCpu);
+
+
 
     setTimeout(function () {
         clearInterval(numbSequen);
 
     }, 5000)
+    console.log(array);
 })
